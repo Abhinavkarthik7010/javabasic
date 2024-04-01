@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+
+            h1{
+            color:red;
+            text-align: center;
+            }
+            h2{
+            color: aquamarine;
+            text-align: end;
+            }
+        </style>
+    </head>
+    <body>
+
+    <form action="">
+
+        <input type="text">
+
+        <input type="submit" value="submit">
+    </form>
+
+    
+    <button onclick="hello()">click</button>
+        <h1>hello world</h1>
+    <button onclick="Abhi()">click</button>
+        <h2>Abhi karthik</h2>
+
+
+        <script>
+
+        let hello=()=>{
+            alert("hello")
+        }
+
+        let Abhi=()=>{
+            let col=document.querySelector("h2");
+            col.style.color="blue"
+        }
+
+        let a=document.forms[0];
+
+        a.addEventListener("submit",function(e){
+    e.preventDefault();
+
+    console.log(e.target[0].value);
+    if(e.target[0].value == "Abhinav"){
+
+        window.open("table.html");
+
+    }else{
+        alert("wrong")
+    }
+        })
+        
+        </script>  
+    </body>
+</html>
